@@ -1,27 +1,18 @@
 package com.ajandroid.lifecycleanalysis
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.ajandroid.lifecycleanalysis.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class FragmentActivity : AppCompatActivity() {
 
     val TAG = "LifecycleAnalysis"
-    val name = "MainActivity"
-
-    private lateinit var binding: ActivityMainBinding
+    val name = "FragmentActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_fragment)
         Log.d(TAG, "onCreate: $name")
-
-        binding.button.setOnClickListener {
-            startActivity(Intent(this, FragmentActivity::class.java))
-        }
     }
 
     override fun onStart() {
