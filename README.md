@@ -6,10 +6,10 @@ App consists of two Activities.
  - MainActivity
  - FragmentActivity
   
-MainActivity  
+**MainActivity**  
 A blank activity with a button to next activity.  
   
-FragmentActivity  
+**FragmentActivity**  
 A blank activity with BlankFragment.  
   
 All the lifecycle methods of Activities and Fragments are overriden with Logs.  
